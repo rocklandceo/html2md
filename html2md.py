@@ -7,8 +7,8 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium import webdriver
 
 def html_to_markdown(url):
-    # Set up the Selenium driver
-    driver = webdriver.Chrome(ChromeDriverManager().install())
+    # Set up the Selenium driver using the specific ChromeDriver version
+    driver = webdriver.Chrome(ChromeDriverManager(version="114.0.5735.90").install())
 
     # Fetch HTML content from the URL using Selenium
     driver.get(url)
