@@ -1,3 +1,4 @@
+
 # html2md: Convert Web Pages to Markdown
 
 `html2md` is a Python-based tool that converts web pages into clean and readable Markdown format.
@@ -27,11 +28,7 @@ pip install -r requirements.txt
 
 ### 3. Usage
 
-
-### Note about Selenium and ChromeDriver
-
-This tool uses Selenium to fetch and interact with web pages, allowing for more dynamic content handling compared to simple HTTP requests. Specifically, it uses the ChromeDriver to run the Chrome browser in the background. Ensure you have Google Chrome installed on your machine.
-
+This tool uses Selenium to fetch and interact with web pages, allowing for more dynamic content handling compared to simple HTTP requests. Specifically, it uses Geckodriver to run the Firefox browser in the background. Ensure you have Firefox installed on your machine.
 
 After setting up, you can use the `html2md.py` script to convert web pages to Markdown:
 
@@ -50,12 +47,3 @@ The script will prompt you to enter the URL of the web page you wish to convert.
 ## License
 
 Please ensure you comply with the licensing terms of the tools and libraries used in this project.
-```
-
-You can replace the content of your current `readme.md` file with the updated version provided above. After updating the `readme.md` file, make sure to commit and push the changes to your GitHub repository:
-
-```bash
-git add readme.md
-git commit -m "Updated readme.md after removing parser submodule"
-git push origin main
-```
