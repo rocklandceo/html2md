@@ -6,6 +6,8 @@
 ## Prerequisites
 
 - [Python](https://www.python.org/downloads/)
+- [Google Chrome Browser](https://www.google.com/chrome/)
+- [ChromeDriver](https://sites.google.com/chromium.org/driver/) (This will be automatically handled by `chromedriver_autoinstaller`)
 
 ## Setup
 
@@ -26,6 +28,12 @@ pip install -r requirements.txt
 ```
 
 ### 3. Usage
+
+
+### Note about Selenium and ChromeDriver
+
+This tool uses Selenium to fetch and interact with web pages, allowing for more dynamic content handling compared to simple HTTP requests. Specifically, it uses the ChromeDriver to run the Chrome browser in the background. Ensure you have Google Chrome installed on your machine.
+
 
 After setting up, you can use the `html2md.py` script to convert web pages to Markdown:
 
