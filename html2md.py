@@ -3,22 +3,19 @@ import requests
 import os
 import re
 from bs4 import BeautifulSoup
-
 import chromedriver_autoinstaller
 from selenium import webdriver
-from selenium.webdriver.chrome.service import Service
 
 def html_to_markdown(url):
+    # Automatically download and install Chrome Driver
+    chromedriver_autoinstaller.install(cwd=True)
+    chromedriver_path = chromedriver_autoinstaller.get_chrome_driver_filename()
 
-    # Automatically download and install Chrome DriverSet up the Selenium driver
-    chromedriver_autoinstaller.install()
-    service = Service()
-    driver = webdriver.Chrome(service=service)
-    
+    # Set up the Selenium driver
+    driver = webdriver.Chrome(executable_path=chromedriver_path)
+
     # Fetch HTML content from the URL using Selenium
     driver.get(url)
-
-    # TODO: Any interactions to expand truncated sections can be added here
 
     # Get the page source (HTML content)
     page_source = driver.page_source
@@ -30,7 +27,7 @@ def html_to_markdown(url):
     soup = BeautifulSoup(page_source, 'html.parser')
     title_element = soup.find('title')
     title = title_element.text if title_element else "default-title"
-    
+
     # Format the title to be used as a filename
     formatted_title = re.sub('[^a-zA-Z0-9\s]', '', title).replace(' ', '-').lower()
 
@@ -40,7 +37,6 @@ def html_to_markdown(url):
     markdown_content = h.handle(page_source)
 
     return formatted_title, markdown_content
-
 
 if __name__ == "__main__":
     url = input("Enter the URL: ")
