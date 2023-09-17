@@ -3,12 +3,12 @@ import requests
 import os
 import re
 from bs4 import BeautifulSoup
-from webdriver_manager.chrome import ChromeDriverManager
+from webdriver_manager.firefox import GeckoDriverManager
 from selenium import webdriver
 
 def html_to_markdown(url):
-    # Set up the Selenium driver using the specific ChromeDriver version
-    driver = webdriver.Chrome(ChromeDriverManager(version="114.0.5735.90").install())
+    # Set up the Selenium driver with Firefox
+    driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
 
     # Fetch HTML content from the URL using Selenium
     driver.get(url)
@@ -33,7 +33,6 @@ def html_to_markdown(url):
     markdown_content = h.handle(page_source)
 
     return formatted_title, markdown_content
-
 
 if __name__ == "__main__":
     url = input("Enter the URL: ")

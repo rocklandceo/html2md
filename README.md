@@ -1,4 +1,3 @@
-```markdown
 # html2md: Convert Web Pages to Markdown
 
 `html2md` is a Python-based tool that converts web pages into clean and readable Markdown format.
@@ -6,8 +5,7 @@
 ## Prerequisites
 
 - [Python](https://www.python.org/downloads/)
-- [Google Chrome Browser](https://www.google.com/chrome/)
-- [ChromeDriver](https://sites.google.com/chromium.org/driver/) (This will be automatically handled by `chromedriver_autoinstaller`)
+- [Firefox Browser](https://www.mozilla.org/en-US/firefox/new/)
 
 ## Setup
 

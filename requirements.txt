@@ -2,4 +2,4 @@ html2text
 requests
 beautifulsoup4
 selenium
-chromedriver_autoinstaller
+webdriver_manager
