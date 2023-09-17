@@ -34,7 +34,8 @@ def html_to_markdown(url):
     chromedriver_autoinstaller.install()
 
     # Set up the Selenium driver
-    service = Service(chromedriver_autoinstaller.get_chrome_driver_filename())
+    chromedriver_autoinstaller.install()
+    service = Service(chromedriver_autoinstaller.driver_filename)
     driver = webdriver.Chrome(service=service)
     
     # Fetch HTML content from the URL using Selenium
