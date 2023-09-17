@@ -14,7 +14,7 @@
 To get started, first clone the `html2md` repository, ensuring you also fetch the included submodules:
 
 ```bash
-git clone --recursive <URL_of_html2md_repo>
+git clone --recursive <https://github.com/rocklandceo/html2md.git>
 
 ```
 
